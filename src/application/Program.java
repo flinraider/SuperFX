@@ -13,6 +13,8 @@ import model.exceptions.IOFXException;
 
 public class Program extends Application {
 	
+	private static Scene mainScene;
+	
 	@Override
 	public void start(Stage stage) throws Exception {
 		
@@ -22,14 +24,18 @@ public class Program extends Application {
 			
 			scrollPane.setFitToHeight(true);
 			scrollPane.setFitToWidth(true);
-			
-			stage.setScene(new Scene(scrollPane));
+			mainScene = new Scene(scrollPane);
+			stage.setScene(mainScene);
 			stage.setTitle("SuperFX");
 			stage.show();
 		} catch (IOException e) {
 			throw new IOFXException(e.getMessage());
 		}
 		
+	}
+	
+	public static Scene getMainScene() {
+		return mainScene;
 	}
 	
 	public static void main(String[] args) {
