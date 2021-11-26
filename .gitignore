@@ -1,6 +1,12 @@
 .metadata
 bin/
 tmp/
+target/
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
 *.tmp
 *.bak
 *.swp
