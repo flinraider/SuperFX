@@ -1,0 +1,21 @@
+.menu {
+    -fx-background-color: #222;
+    -fx-text-fill: white;
+}
+
+.menuBar {
+	   -fx-background-color: #222;
+       -fx-text-fill: white;
+}
+
+.menuItem {
+	   -fx-background-color: #222;
+       -fx-text-fill: white;
+}
+
+.menuButton {
+	 -fx-background-color: #222;
+     -fx-text-fill: white;
+}
+
+
