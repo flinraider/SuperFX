@@ -1,20 +1,17 @@
 package application;
 
-import java.io.IOException;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
 import javafx.stage.Stage;
-import model.exceptions.IOFXException;
 
 public class Program extends Application {
 	
 	private static Scene mainScene;
 	
 	@Override
-	public void start(Stage stage) throws Exception {
+	public void start(Stage stage) {
 		
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/MainView.fxml"));
@@ -26,8 +23,8 @@ public class Program extends Application {
 			stage.setScene(mainScene);
 			stage.setTitle("SuperFX");
 			stage.show();
-		} catch (IOException e) {
-			throw new IOFXException(e.getMessage());
+		} catch (Exception e) {
+			System.out.println("Error: "+e.getMessage());
 		}
 		
 	}

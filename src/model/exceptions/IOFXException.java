@@ -1,8 +1,6 @@
 package model.exceptions;
 
-import java.io.IOException;
-
-public class IOFXException extends IOException {
+public class IOFXException extends Exception {
 	
 	private static final long serialVersionUID = 1L;
 
