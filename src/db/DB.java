@@ -17,8 +17,10 @@ public class DB {
 		if(conn == null) {
 		 try {	
 			 Properties props = loadProperties();
-			 String url = props.getProperty("url");
-			 conn = DriverManager.getConnection(url,props);
+			 String url = props.getProperty("db.url");
+			 String user = props.getProperty("db.user");
+			 String pass =  props.getProperty("db.pass");
+			 conn = DriverManager.getConnection(url, user, pass);
 		 }catch(SQLException e) {
 			 throw new DBException(e.getMessage());
 		 }
