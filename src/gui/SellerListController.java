@@ -19,6 +19,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -27,6 +28,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.entities.Seller;
 import model.service.SellerService;
@@ -112,23 +114,23 @@ public class SellerListController implements Initializable, DataChangeListener {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
 			AnchorPane anchorPane = loader.load();
 
-//			SellerFormController controller = loader.getController();
-//			controller.setSeller(obj);
-//			// injeção de dependencia
-//			controller.setSellerService(new SellerService());
-//			controller.subscribeDataChangeListener(this);
-//			controller.updateFormData();
-//
-//			Stage dialogStage = new Stage();
-//			dialogStage.setTitle("Enter Seller Data");
-//			dialogStage.setScene(new Scene(anchorPane));
-//			dialogStage.setResizable(false);
-//			// dialogStage.initStyle(StageStyle.UNDECORATED);
-//			// pegando a tela anterior
-//			dialogStage.initOwner(parentStage);
-//			// para nao poder clicar na tela anterior
-//			dialogStage.initModality(Modality.WINDOW_MODAL);
-//			dialogStage.showAndWait();
+			SellerFormController controller = loader.getController();
+			controller.setSeller(obj);
+			// injeção de dependencia
+			controller.setSellerService(new SellerService());
+			controller.subscribeDataChangeListener(this);
+			controller.updateFormData();
+
+			Stage dialogStage = new Stage();
+			dialogStage.setTitle("Enter Seller Data");
+			dialogStage.setScene(new Scene(anchorPane));
+			dialogStage.setResizable(false);
+			// dialogStage.initStyle(StageStyle.UNDECORATED);
+			// pegando a tela anterior
+			dialogStage.initOwner(parentStage);
+			// para nao poder clicar na tela anterior
+			dialogStage.initModality(Modality.WINDOW_MODAL);
+			dialogStage.showAndWait();
 
 		} catch (IOException e) {
 			Alerts.showAlerts("IO Exception", "Error load View", e.getMessage(), AlertType.ERROR);
