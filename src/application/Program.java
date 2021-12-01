@@ -19,7 +19,7 @@ public class Program extends Application {
 			
 			scrollPane.setFitToHeight(true);
 			scrollPane.setFitToWidth(true);
-			mainScene = new Scene(scrollPane);
+			mainScene = new Scene(scrollPane, 750, 500);
 			stage.setScene(mainScene);
 			stage.setTitle("SuperFX");
 			stage.show();
