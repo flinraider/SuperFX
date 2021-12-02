@@ -36,7 +36,7 @@
             <TextField fx:id="txtName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label fx:id="labelErrorName" prefHeight="16.0" prefWidth="163.0" textFill="#ee0606" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <GridPane.margin>
-                  <Insets left="10.0" />
+                  <Insets />
                </GridPane.margin></Label>
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <children>
@@ -56,7 +56,7 @@
             <Label fx:id="labelErrorEmail" prefHeight="16.0" prefWidth="163.0" textFill="#ee0606" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <Label fx:id="labelErrorBirthDate" prefHeight="16.0" prefWidth="163.0" textFill="#ee0606" GridPane.columnIndex="2" GridPane.rowIndex="3" />
             <Label fx:id="labelErrorBaseSalary" prefHeight="16.0" prefWidth="163.0" textFill="#ee0606" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <DatePicker fx:id="dpBirthDate" prefHeight="24.0" prefWidth="238.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <DatePicker fx:id="dpBirthDate" prefHeight="24.0" prefWidth="238.0" promptText="exemplo 01/12/1999" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <ComboBox fx:id="comboBoxDepartment" prefHeight="24.0" prefWidth="238.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
