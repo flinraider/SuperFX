@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-import application.Program;
+import application.Main;
 import db.DbIntegratyException;
 import gui.listeners.DataChangeListener;
 import gui.util.Alerts;
@@ -78,7 +78,7 @@ public class DepartmentListController implements Initializable, DataChangeListen
 		tableColumnName.setCellValueFactory(new PropertyValueFactory<>("name"));
 
 		// Para deixar a tabela ate o final de window
-		Stage stage = (Stage) Program.getMainScene().getWindow();
+		Stage stage = (Stage) Main.getMainScene().getWindow();
 		tableViewDepartment.prefHeightProperty().bind(stage.heightProperty());
 
 	}
