@@ -38,6 +38,10 @@
                <GridPane.margin>
                   <Insets />
                </GridPane.margin></Label>
+            <TextField fx:id="txtEmail" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <DatePicker fx:id="dpBirthDate" prefHeight="24.0" prefWidth="238.0" promptText="exemplo 01/12/1999" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtBaseSalary" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="comboBoxDepartment" prefHeight="24.0" prefWidth="238.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <children>
                   <Button fx:id="btnSave" mnemonicParsing="false" onAction="#onBtnSaveAction" text="Save" />
@@ -51,13 +55,9 @@
             <Label text="Birth Date " GridPane.rowIndex="3" />
             <Label text="Base Salary " GridPane.rowIndex="4" />
             <Label text="Departmanet " GridPane.rowIndex="5" />
-            <TextField fx:id="txtEmail" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="txtBaseSalary" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label fx:id="labelErrorEmail" prefHeight="16.0" prefWidth="163.0" textFill="#ee0606" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <Label fx:id="labelErrorBirthDate" prefHeight="16.0" prefWidth="163.0" textFill="#ee0606" GridPane.columnIndex="2" GridPane.rowIndex="3" />
             <Label fx:id="labelErrorBaseSalary" prefHeight="16.0" prefWidth="163.0" textFill="#ee0606" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <DatePicker fx:id="dpBirthDate" prefHeight="24.0" prefWidth="238.0" promptText="exemplo 01/12/1999" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <ComboBox fx:id="comboBoxDepartment" prefHeight="24.0" prefWidth="238.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
    </children>
